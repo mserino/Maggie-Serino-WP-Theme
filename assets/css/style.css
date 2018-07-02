@@ -1,0 +1,341 @@
+/*
+  Maggie Serino Portfolio
+
+  === COLOURS
+  Primary blue:      #29335C
+  Secondary blue:    #09A2B2
+  Orange:            #FE9000
+  Gray99:            #999999
+
+
+  === FONTS
+  Headings: font-family: 'Fira Sans', sans-serif;
+  Text:     font-family: 'Open Sans', sans-serif;
+*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 800;
+}
+
+h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  color: #29335C;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
+  z-index: 10;
+  box-shadow: 0 2px 2px -2px #ccc;
+}
+
+.header__column-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 767px) {
+  .header__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+  }
+
+  .header__list.open {
+    max-height: 200px;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+  }
+
+  .header__column-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .header__list li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .header__list li:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  right: 0;
+  padding: 0;
+}
+
+.hamburger-inner,
+.hamburger-inner:before,
+.hamburger-inner:after {
+  background-color: #29335C;
+  width: 20px;
+  height: 3px;
+}
+
+.hamburger-inner:before {
+  top: -6px;
+}
+
+.hamburger-inner:after {
+  bottom: -6px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.header__list li {
+  padding: 10px;
+}
+
+.header__title {
+  display: flex;
+  align-items: center;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 800;
+}
+
+.title {
+  color: #29335C;
+}
+
+.subtitle {
+  color: #999999;
+}
+
+.title-line {
+  color: #FE9000;
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 50px;
+}
+
+.title-line:after {
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: #29335C;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.title-uppercase {
+  text-transform: uppercase;
+}
+
+.title-huge {
+  font-size: 70px;
+}
+
+.section {
+  padding: 30px 10px;
+}
+@media only screen and (min-width: 768px) {
+  .section {
+    padding: 30px 0;
+  }
+}
+
+p {
+  font-size: 18px;
+  color: #999999;
+}
+
+.img-responsive {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.label {
+  color: #09A2B2;
+  border: 1px solid #09A2B2;
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  display: inline-block;
+}
+
+.hero__col-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+}
+
+.social-icons {
+  margin-top: 25px;
+}
+
+.social-icons .icon {
+  margin-right: 15px;
+  color: #09A2B2;
+}
+
+.social-icons .icon-white {
+  color: #fff;
+}
+
+.social-icons .icon:hover,
+.social-icons .icon:active,
+.social-icons .icon:focus {
+  color: #29335C;
+}
+
+.email-container {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.email {
+  color: #09A2B2;
+}
+
+.email-white {
+  color: #fff;
+}
+
+.hero__arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.hero__arrow .arrow {
+  color: #FE9000;
+}
+
+.work__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.work__element {
+  padding: 0 30px;
+  margin-bottom: 60px;
+}
+
+.work__img-container {
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work__title {
+  margin-bottom: 15px;
+}
+
+.work__link .work__title:hover {
+  color: #29335C;
+}
+
+.work__img-container:after {
+  display: none;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.work__img-container .icon-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #999999;
+  display: none;
+}
+
+.work__link:hover .work__img-container:after,
+.work__link:hover .work__img-container .icon-link {
+  display: block;
+}
+
+.work__link:hover .work__img {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: transform .4s;
+  -o-transition: transform .4s;
+  transition: transform .4s;
+}
+
+.work__img {
+  -webkit-transition: transform .4s;
+  -o-transition: transform .4s;
+  transition: transform .4s;
+}
+
+.contact {
+  color: #FFF;
+  background-color: #09A2B2;
+  padding: 50px 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  padding: 50px 0;
+  background-color: #29335C;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.footer p {
+  color: #FFF;
+  margin: 0;
+}
