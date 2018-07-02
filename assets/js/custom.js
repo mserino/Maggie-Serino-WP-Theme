@@ -17,7 +17,7 @@
 
   $('.js-hamburger').click(() => {
     $('.js-menu-list').toggleClass('open');
-    $(this).toggleClass('is-active');
+    $('.js-hamburger').toggleClass('is-active');
   });
 
 })(jQuery);

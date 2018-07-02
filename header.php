@@ -31,7 +31,7 @@
                 wp_nav_menu(array(
                   'theme_location'          => 'primary',
                   'container'               => false,
-                  'menu_class'              => 'header__list',
+                  'menu_class'              => 'header__list js-menu-list',
                   'fallback_cb'             => false,
                   'depth'                   => 4
                 ));
